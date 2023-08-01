@@ -10,7 +10,26 @@ npm install -D node-sass nodemon
 sass --watch sass:css 
 // para compilar 
 
+// para usar webpack
+// a veces es necesario npm init para crear el json
+npm i webpack webpack-cli
 
+// en el package.json va escrito esto dentro del "script"
+
+"build": "webpack"
+
+// para correrlo
+npm build
+
+// crear un archivo webpack.config.js y aca adentro va esto
+
+module.exports = {
+entry: "./browser/app.js",
+output: {
+    path: __dirname + "/browser",
+    filename: "bundle.js"
+    }
+}
 
 // comandos para crear el entorno de trabajo de react 
 
