@@ -1,0 +1,397 @@
+@media screen and (min-width: 200px) {
+    /* Header */
+    .cabecera {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-content: center;
+        background-image: linear-gradient(to bottom, $primario, $terciario );
+        gap: 2rem;
+    }
+    header {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+/* Index */
+    .card {
+        margin: 5rem 0.5rem 3rem 0.5rem;
+        padding: calc($medida / 2);
+        background-color: $terciario;
+        border-top: outset 0.2rem $secundario;
+        border-right: outset 0.2rem $gris;
+        border-bottom: outset 0.2rem $secundario;
+        border-left: outset 0.2rem $gris;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        &__title {
+            color: $secundario;
+            margin: 1rem 0rem 1.5rem 1rem;
+            &-parrafo {
+                color: $secundario;
+                width: auto;
+            }
+        }
+    }
+
+/* Proximos Conciertos */
+.flex__entradas {
+    @include flex_column_AIcenter;
+}
+.entradas_borde {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 75%;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+    border: groove 0.4rem $secundario;
+    margin-top: calc($medida * 2);
+    color: $secundario;
+    background-color: $terciario;
+}
+.entradas_boton {
+    color: $secundario;
+    background-color: $primario;
+    border: solid $secundario 0.3rem;
+    font-family: 'Eater', cursive;
+    font-weight: bold;
+    width: calc($medida * 6.5);
+    transition: 0.6s;
+
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+.barra__conciertos {
+    border: outset $secundario 0.2rem;
+    @include sizes ( 20rem, 2rem );
+}
+.barra__completa {
+    @include sizes ( 20rem, 2rem );
+    background-color: $rojo;
+    animation-name: completa;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes completa {
+    0% { width: 0rem; }
+    20% { width: 4rem; }
+    40% { width: 8rem; }
+    60% { width: 12rem; }
+    80% { width: 16rem; }
+    100% { width: 20rem; }   
+}
+.barra__70 {
+    @include sizes ( 14rem, 2rem );
+    background-color: $rojo;
+    animation-name: setenta;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes setenta {
+    0% { width: 0rem; }
+    25% { width: 3.5rem; }
+    50% { width: 7rem; }
+    75% { width: 10.5rem; }
+    100% {width: 14rem; }   
+}
+.barra__50 {
+    @include sizes ( 10rem, 2rem );
+    background-color: $rojo;
+    animation-name: cincuenta;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes cincuenta {
+    0% { width: 0rem; }
+    20% { width: 2rem; }
+    40% { width: 4rem; }
+    60% { width: 6rem; }
+    80% { width: 8rem; }
+    100% { width: 10rem; }
+}
+
+/* Galeria */
+.flex__img {
+    @include flex_row_sp-ar;
+}
+.galeria__img {
+    margin: 3rem 0rem 2rem 0rem;
+    border-top: outset 0.6rem $secundario;
+    border-right: outset 0.6rem $gris;
+    border-bottom: outset 0.6rem $secundario;
+    border-left: outset 0.6rem $gris;
+    @include sizes ( 23rem, 12rem );
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+.galeria__iframe {
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+/* Discografia */
+.flex__album {
+    @include flex_column_AIcenter;
+    margin-top: calc($medida + 1rem);
+}
+.album {
+margin-top: $medida;
+}
+
+/* Contacto */
+fieldset {
+    background-color: $terciario;
+    border: groove 0.4rem $secundario;
+    margin-top: calc($medida * 4);
+    width: 90%;
+}
+.flex__form {
+    display: flex;
+    justify-content: center;
+}
+
+/* Productos */
+.grilla {
+    display: grid;
+    grid-template-areas:
+    "productos";
+    grid-template-columns: repeat(1,1fr);
+    margin-top: calc($medida * 2);
+}
+.productos {
+    display: grid;
+    grid-area: productos;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+    row-gap: $medida;
+    &__card {
+        @include flex_column_AIcenter;
+        justify-content: space-between;
+        background-color: $terciario;
+        border: outset 0.3rem $secundario;
+        padding: 0.8rem;
+        color: $secundario;
+        width: calc($medida * 15);
+        &-img {
+            width: 16.5rem;
+            height: 18rem;
+        }
+    }
+}
+
+}
+
+@media screen and (min-width: 600px) {
+    /* Proximos Conciertos */
+    .flex__entradas {
+        @include flex_column_AIcenter;
+    }
+    .entradas_borde {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: calc($medida * 33);
+        padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+        border: groove 0.4rem $secundario;
+        margin-top: calc($medida * 2);
+        color: $secundario;
+        background-color: $terciario;
+    }
+    /* Contacto */
+    fieldset {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: flex;
+        justify-content: center;
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            a {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+
+    /* Discografia */
+    .flex__album {
+        @include flex_row_sp-ar;
+        align-items: center;
+        margin-top: calc($medida * 2);
+    }
+
+    /* Productos */
+    .grilla {
+        display: grid;
+        grid-template-areas:
+        "productos productos";
+        grid-template-columns: repeat(2,1fr);
+        margin-top: calc($medida * 2);
+    }
+    .productos {
+        display: grid;
+        grid-area: productos;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        row-gap: calc($medida / 2);
+        column-gap: calc($medida / 2);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Heaeder */
+    .cabecera {
+        display: grid;
+        grid-template-columns: 20% auto;
+        grid-template-rows: 12rem;
+    }
+    header {
+        margin-top: 0rem;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .header__flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulos__h2 {
+        margin-left: 3.5rem;
+    }
+
+    /* Index */
+    .historia {
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        margin: 10rem 0rem 0rem 5rem;
+        padding: 1rem;
+        width: calc($medida * 50);
+        background-color: $terciario;
+        border-top: outset 0.4rem $secundario;
+        border-right: outset 0.4rem $gris;
+        border-bottom: outset 0.4rem $secundario;
+        border-left: outset 0.4rem $gris;
+        &__title {
+            color: $secundario;
+            margin: 1rem 0rem 1.5rem 1rem;
+            &-parrafo {
+                color: $secundario;
+                width: auto;
+                }
+            }
+        }
+
+    /* Proximos Conciertos */
+    .flex__entradas {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .entradas_borde {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: calc($medida * 3);
+        width: calc($medida * 40);
+        padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+        border: groove 0.4rem $secundario;
+        margin-block: 1.5rem;
+        color: $secundario;
+        background-color: $terciario;
+    }
+    .barra__conciertos {
+        margin-left: calc($medida * 3);
+    }
+
+    /* Galeria */
+    .flex__img {
+        @include flex_row_sp-ar;
+    }
+
+    /* Discografia */
+    .flex__album {
+        @include flex_row_sp-ar;
+        margin-top: calc($medida + 1rem);
+    }
+
+    /* Contacto */
+    fieldset {
+        width: calc($medida * 30);
+        margin-left: calc($medida + 3rem);
+    }
+    form {
+        color: $secundario;
+        margin-top: calc($medida * 1.5);
+        margin-left: calc($medida * 2);
+        font-weight: bold;
+        &_boton {
+            color: $secundario;
+            background-color: $primario;
+            border: solid $secundario 0.3rem;
+            font-family: 'Eater', cursive;
+            font-weight: bold;
+            margin: 1rem 0rem;
+            width: calc($medida * 9);
+        }
+    }
+    .flex__form {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    /* Productos */
+    .grilla {
+        display: grid;
+        grid-template-areas:
+        "productos productos productos";
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat (3,1fr);
+        margin-top: calc($medida * 2);
+    }
+    .titulo__productos {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .productos {
+        display: grid;
+        grid-area: productos;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: $medida;
+        justify-items: center;
+        &__card {
+            @include flex_column_AIcenter;
+            justify-content: space-between;
+            background-color: $terciario;
+            border: outset 0.3rem $secundario;
+            padding: calc($medida - 0.2rem );
+            color: $secundario;
+            width: calc($medida * 20) ;
+        }
+    }
+}

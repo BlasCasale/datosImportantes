@@ -1,0 +1,43 @@
+- comandos para crear el entorno de trabajo de react 
+
+npm create vite@latest
+
+- con vanilla 
+
+1) abro visual o desde la consola en la carpeta y pongo este comando
+npm i @vitejs/plugin-react -E
+
+2) instalo react y react dom con este comando 
+npm i react react-dom -E
+
+3) esto se configura dentro de vite.config.js
+
+import { defineConfig } from "vite";
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+    plugins: [react()]
+})
+
+- nada mas que esto aca
+
+4) dentro del main.js que le cambio la extension a jsx, le pongo esto adentro para que me corra la App
+
+import { createRoot } from 'react-dom/client'
+import App from './App'
+
+const root = createRoot(document.getElementById("app"))
+
+root.render(<App />)
+
+- tambien tengo que crear el App para que me renderice todo lo que voy creando, como siempre y listo
+
+5) instalar el linter
+
+npm i standard -D
+
+- esto dentro del package.json
+
+"eslintConfig": {
+    "extends" : "./node_modules/standard/eslintrc.json"
+  }

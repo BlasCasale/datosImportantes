@@ -1,0 +1,14 @@
+- comandos importantes para SQL
+- cuando se escriben comando de consola con \ no lleva ; pero cuando hago comandos de SQL si es necesario
+
+
+- comandos de consola
+
+\l   => nos da una lista de las BDD en este servidor [5432]
+\c "nombre de la BDD" => conexión a la BDD
+\dt => "display table" es para mostrar tablas
+
+- comandos de SQL
+
+CREATE DATABASE "nombre";  => para crear una DBB
+DROP DATABASE "nombre de la BDD";   => para borrar una BDD

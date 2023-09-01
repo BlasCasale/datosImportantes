@@ -1,0 +1,37 @@
+@media screen and (min-width:200px) {
+    .pie_pag {
+        font-size: small;
+        font-weight: bold;
+        color: white;
+        background-color: black;
+        margin-top: 2rem;
+        margin-left: 0rem;
+        border: groove 0.5rem white;
+        width: 90%;
+    }
+}
+@media screen and (min-width: 600px) {
+    .pie_pag {
+        font-size: small;
+        font-weight: bold;
+        color: $secundario;
+        background-color: $primario;
+        margin-top: 2rem;
+        margin-left: 0rem;
+        border: groove 0.5rem $secundario;
+        width: 19rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .pie_pag {
+        font-size: small;
+        font-weight: bold;
+        color: $secundario;
+        background-color: $primario;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+        border: groove 0.5rem $secundario;
+        width: 30rem;
+    }
+}

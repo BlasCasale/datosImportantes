@@ -1,0 +1,91 @@
+/* Código de etiquetas y reseteos */
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62,5%;
+}
+body {
+    font-family: 'Eater', cursive;
+}
+img,
+iframe {
+    max-width: 100%;
+}
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+legend {
+    font-weight: bold ;
+    color: white;
+}
+input {
+    margin-left: 2rem;
+    font-family: 'Eater', cursive;
+}
+form {
+    color: white;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+h1 {
+    padding: 1rem;
+    color: white;
+    font-size: calc($medida * 3.8);
+}
+/* Código del header */
+.flex__titulo {
+    display: flex;
+    justify-content: center;
+    background-color: $primario;
+}
+.titulos__h2 {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    background-color: #565857;
+    color: white;
+    padding: 0.4rem;
+    border: outset 0.2rem snow;
+    width: max-content;
+}
+.img__header {
+    @include sizes ( 6rem, 8rem );
+    animation-name: agrandar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.a__header {
+    @include sizes ( 6rem, 8rem );
+    animation-name: agrandar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes agrandar {
+    0% {scale: 1;}
+    10% {scale: 1.01;}
+    20% {scale: 1.02;}
+    30% {scale: 1.03;}
+    40% {scale: 1.04;}
+    50% {scale: 1.05;}
+    60% {scale: 1.04;}
+    70% {scale: 1.03;}
+    80% {scale: 1.02;}
+    90% {scale: 1.01;}
+    100% {scale: 1;}
+}
+
+/* Extends */
+
+.fondos {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

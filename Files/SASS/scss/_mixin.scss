@@ -1,0 +1,15 @@
+@mixin flex_row_sp-ar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+@mixin flex_column_AIcenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin sizes ($ancho , $alto) {
+    width: $ancho;
+    height: $alto;
+}

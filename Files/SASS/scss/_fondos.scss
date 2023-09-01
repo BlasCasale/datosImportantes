@@ -1,0 +1,24 @@
+.fondo1 {
+    background-image: url(../img/fondo_inicio.png);
+    @extend .fondos
+}
+.fondo2 {
+    background-image: url(../img/fondo_proximos_conciertos.jpg);
+    @extend .fondos
+}
+.fondo3 {
+    background-image: url(../img/fondo_discografia.jpg);
+    @extend .fondos
+}
+.fondo4 {
+    background-image: url(../img/fondo_galeria.jpg);
+    @extend .fondos
+}
+.fondo5 {
+    background-image: url(../img/fondo_contacto.jpg);
+    @extend .fondos
+}
+.fondo6 {
+    background-image: url(../img/fondo_productos.jpg);
+    @extend .fondos
+}
