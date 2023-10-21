@@ -1,4 +1,8 @@
 - esto es para configurar el store de redux
+- hay que hacer tambien el 
+- npm i redux redux-thunk
+- si lo quiero en react
+- npm i react-redux
 
 import { createStore, applyMiddleware, compose } from 'redux'
 import { rootReducer } from './reducer'
